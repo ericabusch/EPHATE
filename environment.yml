@@ -1,0 +1,17 @@
+name: ephate_env
+channels:
+  - conda-forge
+  - intel
+  - defaults
+  - bioconda
+dependencies:
+  - numpy
+  - scikit-learn
+  - scipy
+  - pingouin
+  - jupyterlab
+  - conda-forge::nilearn
+  - pip: 
+      - phate
+      - scprep 
+prefix: ephate_env
