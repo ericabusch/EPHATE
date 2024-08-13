@@ -3,7 +3,7 @@
 ## Quick Start
 If you would like to get started using E-PHATE, check out our example below or sample notebook within this repository.
 
-If you have loaded a matrix `X1` (with samples on rows, features on columns, generally a form of high-dimensional biological data) and a second matrix of [exogenously-measured] data `X2` (with matched samples in the same order as the rows of `X1`), you can run E-PHATE as follows:
+If you have loaded a matrix `X1` (with samples on rows, features on columns, generally a form of high-dimensional biological data) and a second matrix of *exogenously-measured* data `X2` (with matched samples in the same order as the rows of `X1`), you can run E-PHATE as follows:
 
 ```
 import ephate
