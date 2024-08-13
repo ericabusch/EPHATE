@@ -16,4 +16,6 @@ Exogenous-PHATE (E-PHATE) is a method to model the interplay of multi-dimensiona
 
 For more information, see our [publication in Biological Psychiatry: Cognitive Neuroscience and Neuroimaging](https://doi.org/10.1016/j.bpsc.2024.07.001).
 
+At the moment, you can use E-PHATE by cloning this repository; will be available via pip soon!
+
 ### Erica L. Busch, August 2024
