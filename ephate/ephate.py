@@ -397,7 +397,7 @@ class EPHATE(BaseEstimator):
             n_samples distance or affinity matrix
         Returns
         -------
-        tphate_operator : TPHATE
+        ephate_operator : EPHATE
         The estimator object
         """
         X, X2, n_pca, precomputed, update_graph = self._parse_input(X, X2)
@@ -411,7 +411,7 @@ class EPHATE(BaseEstimator):
             )
         else:
             _logger.info(
-                "Running TPHATE on precomputed {} matrix with {} observations.".format(
+                "Running EPHATE on precomputed {} matrix with {} observations.".format(
                     precomputed, X.shape[0]
                 )
             )
@@ -458,8 +458,8 @@ class EPHATE(BaseEstimator):
         ----------
         X : array, optional, shape=[n_samples, n_features]
             input data with `n_samples` samples and `n_dimensions`
-            dimensions. Not required, since TPHATE does not currently embed
-            cells not given in the input matrix to `TPHATE.fit()`.
+            dimensions. Not required, since EPHATE does not currently embed
+            cells not given in the input matrix to `EPHATE.fit()`.
             Accepted data types: `numpy.ndarray`,
             `scipy.sparse.spmatrix`, `pd.DataFrame`, `anndata.AnnData`. If
             `knn_dist` is 'precomputed', `data` should be a n_samples x
@@ -475,11 +475,11 @@ class EPHATE(BaseEstimator):
         Returns
         -------
         embedding : array, shape=[n_samples, n_dimensions]
-        The cells embedded in a lower dimensional space using TPHATE
+        The samples embedded in a lower dimensional space using EPHATE
         """
         if self.graph is None:
             raise NotFittedError(
-                "This TPHATE instance is not fitted yet. Call "
+                "This EPHATE instance is not fitted yet. Call "
                 "'fit' with appropriate arguments before "
                 "using this method."
             )
@@ -676,7 +676,7 @@ class EPHATE(BaseEstimator):
         Determines the Von Neumann entropy of the diffusion affinities
         at varying levels of `t`. The user should select a value of `t`
         around the "knee" of the entropy curve.
-        We require that 'fit' stores the value of `TPHATE.diff_op`
+        We require that 'fit' stores the value of `EPHATE.diff_op`
         in order to calculate the Von Neumann entropy.
         Parameters
         ----------
