@@ -14,7 +14,6 @@ import numbers
 import pickle
 import sys
 import tasklogger
-
 from . import matrix, utils
 
 _logger = tasklogger.get_tasklogger("graphtools")

@@ -12,7 +12,6 @@ import statsmodels.api as sm
 import numbers
 import warnings
 import tasklogger
-
 from . import matrix, utils
 from .base import DataGraph
 
