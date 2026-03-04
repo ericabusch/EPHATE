@@ -11,7 +11,6 @@ install_requires = [
     "future",
     "tasklogger>=1.0",
     "graphtools>=1.5.3",
-    "scprep>=1.0",
     "matplotlib>=3.0",
     "s_gd2>=1.8.1",
     "pygsp",

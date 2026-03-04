@@ -10,8 +10,6 @@ import numpy as np
 from deprecated import deprecated
 
 import tasklogger
-import scprep
-import s_gd2
 
 _logger = tasklogger.get_tasklogger("graphtools")
 
@@ -53,7 +51,6 @@ def classic(D, n_components=2, random_state=None):
     return Y
 
 
-@scprep.utils._with_pkg(pkg="s_gd2", min_version="1.3")
 def sgd(D, n_components=2, random_state=None, init=None):
     """Metric MDS using stochastic gradient descent
 
@@ -75,6 +72,10 @@ def sgd(D, n_components=2, random_state=None, init=None):
     -------
     Y : array-like, embedded data [n_sample, ndim]
     """
+    try:
+        import s_gd2
+    except ImportError:
+        raise ImportError("Package 's_gd2>=1.3' is required for SGD MDS. Install it with: pip install s_gd2")
     if not n_components == 2:
         raise NotImplementedError
     _logger.debug("Performing SGD MDS on " "{} of shape {}...".format(type(D), D.shape))
